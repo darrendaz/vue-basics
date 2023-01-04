@@ -1,11 +1,9 @@
 <script setup>
-import primaryButtonComponent from './components/icons/primaryButtonComponent.vue';
+import HomeView from './views/HomeView.vue';
 </script>
 
 <template>
-  <primaryButtonComponent />
+  <HomeView />
 </template>
-
-<style scoped></style>
 
 <style scoped></style>
