@@ -2,16 +2,23 @@
 import { ref } from 'vue';
 const buttonText = ref('');
 const clickCount = ref(0);
+const isActive = ref(true);
+const classArray = ref(['button', 'button--hyperion']);
 
-function handleButtonClick() {
+const handleButtonClick = () => {
   buttonText.value = `Clicked ${++clickCount.value}`;
-}
+};
+
+const handleError = () => {
+  // console.log([...classArray.value]);
+  console.log(classArray.value);
+};
 </script>
 
 <template>
   <button
-    class="button button--hyperion"
-    @click.capture.prevent="handleButtonClick">
+    :class="[isActive ? classArray : '']"
+    @click.capture.prevent="[isActive ? handleButtonClick() : handleError()]">
     <span
       ><span>{{ buttonText || 'Primary Button' }}</span></span
     >
