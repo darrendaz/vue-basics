@@ -10,8 +10,8 @@ const handleButtonClick = () => {
 };
 
 const handleError = () => {
-  // console.log([...classArray.value]);
-  console.log(classArray.value);
+  console.log([...classArray.value]);
+  // console.log(classArray.value);
 };
 </script>
 
